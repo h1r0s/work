@@ -15,1073 +15,317 @@ MathJax.Hub.Config({
 </head>
 
 <body>
-<h1>Radiation Interactions</h1>
-The operation of any radiation detector basically depends on the manner in which the
-radiation to be detected interacts with the material of the detector itself. An understanding
-of the response of a specific type of detector must therefore be based on a familiarity with
-the fundamental mechanisms by which radiations interact and lose their energy in matter.
-Many general reference works are available concerning this broad topic; the classic text by
-Evans, to mention only one, has served as a standard reference for several decades.
+<h1 align="center">放射性表面汚染の測定方法−<br>\(\beta\)線放出核種（最大エネルギー\(0.15 MeV\) 以上）<br>及び\(\alpha\)線放出核種</h1>
+<h2>序文</h2>
+<p>この規格は，1988 年に第 1 版として発行された ISO 7503-1 を基に，技術的内容及び対応国際規格の構
+成を変更することなく作成した日本工業規格である</p>
 
-<p>To organize the discussions that follow, it is convenient to arrange the four major categories
-of radiations introduced in Chapter 1 into the following matrix:</p>
+<h2>1 適用範囲</h2>
+<p>この規格は，物品，施設，線源収納容器，密封線源など（以下，“物品など”という。）の放射性表面汚染を表面汚染密度で評価する方法について規定する。
+ただし，皮膚及び衣服については，適用しない。</p>
 
-<table align="center" cellpadding="10">
-<tr><th>Charged Particulate Radiations</th><th></th><th>Uncharged Radiations</th></tr>
-<tr>
-<td align="center">Heavy charged particles<br>(characteristic distance \(\cong 10^{-5} m\))</td>
-<td align="center">\(\Leftarrow\)</td>
-<td align="center">Neutrons<br>(characteristic length \(\cong 10^{-1} m\))</td>
-</tr>
-<tr>
-<td align="center">Fast electrons<br>(characteristic distance \(\cong 10^{-3} m\))</td>
-<td align="center">\(\Leftarrow\)</td>
-<td align="center">X-rays and gamma rays<br>(characteristic length \(\cong 10^{-1} m\))</td>
-</tr>
-</table>
+<p>この規格は，最大エネルギー\(E_{\beta_{max}}\)が \(0.15 MeV\) 以上の\(\beta\)線放出核種及び\(\alpha\)線放出核種による放射性表面汚染に適用する。
+厳密には，1 壊変当たりに生成される\(\beta\)粒子，単色電子，又は\(\alpha\)粒子の数が，ほぼ 1 個であるとみなせる核種に限定される（表 A.3 参照）。</p>
 
-<p>The entries in the left column represent the charged particulate radiations that,
-because of the electric charge carried by the particle, continuously interact through the
-coulomb force with the electrons present in any medium through which they pass. The radiations
-in the right column are uncharged and therefore are not subject to the coulomb
-force. Instead, these radiations must first undergo a "catastrophic" interaction (often
-involving the nucleus of constituent atoms) that radically alters the properties of the incident
-radiation in a single encounter. In all cases of practical interest, the interaction results
-in the full or partial transfer of energy of the incident radiation to electrons or nuclei of the
-constituent atoms, or to charged particle products of nuclear reactions. If the interaction
-does not occur within the detector, these uncharged radiations (e.g., neutrons or gamma
-rays) can pass completely through the detector volume without revealing the slightest hint
-that they were ever there.</p>
+<h3>注記</h3>
+この規格の対応国際規格及びその対応の程度を表す記号を，次に示す。<br>
+ISO 7503-1:1988，Evaluation of surface contamination−Part 1: Beta-emitters (maximum beta energy greater than 0.15 MeV) and alpha-emitters (IDT)<br>
+なお，対応の程度を表す記号(IDT)は，ISO/IEC Guide 21 に基づき，一致していることを示す。
 
-<p>The horizontal arrows shown in the diagram illustrate the results of such catastrophic
-interactions. An \(X\text{-}\) or gamma ray, through the processes described in this chapter, can
-transfer all or part of its energy to electrons within the medium. The resulting <i>secondary
-electrons</i> bear a close similarity to the fast electron radiations (such as the beta particle)
-discussed in Chapter 1. Devices designed to detect gamma rays are tailored to promote
-such interactions and to fully stop the resulting secondary electrons so that their entire
-energy may contribute to the output signal. In contrast, neutrons may interact in such a way
-as to produce secondary heavy charged particles, which then serve as the basis of the detector
-signal.</p>
+<h2>2 引用規格</h2>
+<p>次に掲げる規格は，この規格に引用されることによって，この規格の規定の一部を構成する。これらの引用規格は，その最新版（追補を含む。）を適用する。</p>
+<ul>
+<li>JIS Z 4001  原子力用語</li>
+<li>JIS Z 4329  放射性表面汚染サーベイメータ</li>
+<li>JIS Z 4334  放射性表面汚染モニタ校正用線源−\(\beta\)線放出核種（最大エネルギー\(0.15 MeV\) 以上）及び\(\alpha\)線放出核種</li>
+</ul>
 
-<p>Also listed in the diagram are order-of-magnitude numbers for the characteristic distance
-of penetration or average path length (range or mean free path) in solids for typical
-energy radiations in each category.</p>
+<h2>3 用語及び定義</h2>
+<p>この規格で用いる主な用語及び定義は，JIS Z 4001 によるほか，次による。</p>
 
-<h2>I. INTERACTION OF HEAVY CHARGED PARTICLES</h2>
-<h3>A. Nature of the Interaction</h3>
-Heavy charged particles, such as the alpha particle, interact with matter primarily through
-coulomb forces between their positive charge and the negative charge of the orbital electrons
-within the absorber atoms. Although interactions of the particle with nuclei (as in
-Rutherford scattering or alpha-particle-induced reactions) are also possible, such encounters
-occur only rarely and they are not normally significant in the response of radiation
-detectors. Instead, charged particle detectors must rely on the results of interactions with
-electrons for their response.
+<h3>3.1 放射性表面汚染</h3>
+<p>物品などの表面の放射性汚染。</p>
 
-<p>Upon entering any absorbing medium, the charged particle immediately interacts
-simultaneously with many electrons. In any one such encounter, the electron feels an
-impulse from the attractive coulomb force as the particle passes its vicinity. Depending on
-the proximity of the encounter, this impulse may be sufficient either to raise the electron
-to a higher-lying shell within the absorber atom (excitation) or to remove completely the
-electron from the atom (ionization). The energy that is transferred to the electron must
-come at the expense of the charged particle, and its velocity is therefore decreased as a
-result of the encounter. The maximum energy that can be transferred from a charged particle
-of mass rn with kinetic energy \(E\) to an electron of mass \(m_{0}\) in a single collision is
-\(4Em_{0}/m\), or about \(1/500\) of the particle energy per nucleon. Because this is a small fraction
-of the total energy, the primary particle must lose its energy in many such interactions during
-its passage through an absorber. At any given time, the particle is interacting with many
-electrons, so the net effect is to decrease its velocity continuously until the particle is
-stopped.</p>
+<h3>3.2 固定性表面汚染</h3>
+<p>通常の作業状況で放射性物質が，物品などの表面から遊離しない状態の放射性表面汚染。</p>
 
-<p>Representative paths taken by heavy charged particles in their slowing down process
-are schematically represented in the sketch below. Except at their very end, the tracks tend
-to be quite straight because the particle is not greatly deflected by any one encounter, and
-interactions occur in all directions simultaneously. Charged particles are therefore characterized
-by a definite range in a given absorber material. The range, to be defined more precisely
-below, represents a distance beyond which no particles will penetrate.</p>
+<h3>3.3 遊離性表面汚染</h3>
+<p>通常の作業状況で放射性物質が，物品などの表面から遊離する状態の放射性表面汚染。</p>
 
-<p><img src="noname2.1.png" width="315" height="201" alt=""></p>
+<h4>注記 1</h4>
+<p>“通常の作業”の定義は，放射性表面汚染から放射性物質を吸入するリスクの評価に重要である。
+放射性表面汚染との物理的接触のうちで，“通常の作業”とみなせる最大の接触強さの例として，次のものがある。</p>
 
-<p>The products of these encounters in the absorber are either excited atoms or <i>ion pairs</i>.
-Each ion pair is made up of a free electron and the corresponding positive ion of an
-absorber atom from which an electron has been totally removed. The ion pairs have a natural
-tendency to recombine to form neutral atoms, but in some types of detectors, this
-recombination is suppressed so that the ion pairs may be used as the basis of the detector
-response.</p>
+<ul>
+<li>人体と放射性表面汚染との間で日常的に起こる，事故でない接触（衣服を介する間接的な場合と直接皮膚が触れる場合とがある。）。</li>
+<li>人が通常の力で器具を用いて物を取り扱うとき（破壊的な作業は除く。）の器具と物の表面との接触。</li>
+</ul>
 
-<p>In particularly close encounters, an electron may undergo a large enough impulse that
-after having left its parent atom, it still may have sufficient kinetic energy to create further
-ions. These energetic electrons are sometimes called <i>delta rays</i> and represent an indirect
-means by which the charged particle energy is transferred to the absorbing medium. Under
-typical conditions, the majority of the energy loss of the charged particle occurs via these
-delta rays. The range of the delta rays is always small compared with the range of the incident
-energetic particle, so the ionization is still formed close to the primary track. On a
-microscopic scale, one effect of this process is that the ion pairs normally do not appear as
-randomly spaced single ionizations, but there is a tendency to form many "clusters" of multiple
-ion pairs distributed along the track of the particle.</p>
+<p>ふき取り試験のふき取る強さは，このような通常の作業における接触の強さと同等であることが望ましい。
+通常，1 回のふき取りで遊離性表面汚染の全部をふき取ることはない。</p>
 
-<h3>B. Stopping Power</h3>
-The <i>linear stopping power</i> \(S\) for charged particles in a given absorber is simply defined as
-the differential energy loss for that particle within the material divided by the corresponding
-differential path length:
+<h4>注記 2</h4>
+<p>人為的行為がなくても，湿度，化学薬品などの影響によって，又は腐食，拡散などの過程を経て，固定性表面汚染が遊離性表面汚染に変化することがある。
+また，その逆の現象も起こり得るし，蒸発及び揮発によって放射性表面汚染の放射能が減少することもある。</p>
+
+<h3>3.4 表面汚染密度</h3>
+<p>放射性表面汚染の放射能の汚染面積に対する比。
+単位は，\(Bq \cdot cm^{−2}\)で表す</p>
+
+<h3>3.5 直接測定法</h3>
+<p>放射線測定器を用いて固定性表面汚染及び遊離性表面汚染を直接的に測定する方法。
+この方法は，物品などの内部に収納された放射性物質からの放射線，又は周囲の放射線の影響を受けることがある。</p>
+
+<h3>3.6 間接測定法</h3>
+<p>ふき取り試験によって，遊離性表面汚染を間接的に測定する方法</p>
+
+<h3>3.7 ふき取り試験</h3>
+<p>ふき取りろ紙又はふき取りろ紙以外の採取材（以下，“ふき取りろ紙など”という。）を用いて物品などの表面をふき取り，ふき取りろ紙などに移行した放射能から遊離性表面汚染を評価する試験。
+ふき取りろ紙などを適切な液体で湿らせてふき取る方法（以下，“湿式ふき取り試験”という。）と乾燥したふき取りろ紙などを用いてふき取る方法（以下，“乾式ふき取り試験”という。）とがある</p>
+
+<h3>3.8 ふき取り効率  \(F\)</h3>
+<p>ふき取り試験において，1 回のふき取りによってふき取られた放射能のふき取る前の遊離性表面汚染の放射能に対する比で，次の式による。</p>
 \[
-S = - \frac{dE}{dx} \tag{2.1}
+F = \frac{A_{p}}{A_{T}}
 \]
 
-The value of \(- dE/dx\) along a particle track is also called its <i>specific energy loss</i> or, more
-casually, its "rate" of energy loss.
-
-<p>For particles with a given charge state, \(S\) increases as the particle velocity is decreased.
-The classical expression that describes the specific energy loss is known as the <i>Bethe
-formula</i> and is written</p>
-\[
- - \frac{dE}{dx} = \frac{4\pi e^{4}z^{2}}{m_{0}v^{2}}NB \tag{2.2}
-\]
-
-where
-\[
-B \equiv Z \left[ \ln\frac{2m_{0}v^{2}}{I} - \ln \left(  1 - \frac{v^{2}}{c^{2}} - \frac{v^{2}}{c^{2}} \right) \right]
-\]
-
-In these expressions, \(v\) and \(ze\) are the velocity and charge of the primary particle, \(N\) and \(Z\)
-are the number density and atomic number of the absorber atoms, \(m_{0}\) is the <i>electron rest
-mass</i>, and \(e\) is the electronic charge. The parameter \(I\) represents the average excitation and
-ionization potential of the absorber and is normally treated as an experimentally determined
-parameter for each element. For nonrelativistic charged particles (\(v \ll c\)), only the
-first term in \(B\) is significant. Equation (2.2) is generally valid for different types of charged
-particles provided their velocity remains large compared with the velocities of the orbital
-electrons in the absorbing atoms.
-
-<p>The expression for \(B\) in Eq. (2.2) varies slowly with particle energy. Thus, the general
-behavior of \(dE/dx\) can be inferred from the behavior of the multiplicative factor. For a given
-nonrelativistic particle, \(dE/dx\) therefore varies as \(1/v^{2}\), or inversely with particle energy. This
-behavior can be heuristically explained by noting that because the charged particle spends a
-greater time in the vicinity of any given electron when its velocity is low, the impulse felt by
-the electron, and hence the energy transfer, is largest. When comparing different charged particles
-of the same velocity, the only factor that may change outside the logarithmic term in
-Eq. (2.2) is \(z^{2}\), which occurs in the numerator of the expression. Therefore, particles with the
-greatest charge will have the largest specific energy loss. Alpha particles, for example, will
-lose energy at a rate that is greater than protons of the same velocity but less than that of
-more highly charged ions. In comparing different materials as absorbers, \(dE/dx\) depends primarily
-on the product \(NZ\), which is outside the logarithmic term. This product \(NZ\) represents
-the electron density of the absorber. High atomic number, high-density materials will consequently
-result in the greatest linear stopping power.</p>
-
-<p>The variation of the specific energy loss for a number of different charged particles is
-shown in Fig. 2.1 over a wide energy range. This figure shows that the value of \(dE/dx\) for
-many different types of charged particles approaches a near-constant broad minimum
-value at energies above several hundred \(MeV\), where their velocity approaches the velocity
-of light. This specific energy loss corresponds to about \(2 MeV\) per \(g/cm^{2}\) in light materials.
-Because of their similar energy loss behavior, such relativistic particles are sometimes
-referred to as "minimum ionizing particles." Fast electrons also fall into this category at
-energies as low as about \(1 MeV\) because their much lower mass results in relativistic velocities
-even at such modest energy</p>
-
-<p><img src="fig2.1.png" width="391" height="445" alt=""></p>
-
-<p>The Bethe formula begins to fail at low particle energies where charge exchange
-between the particle and absorber becomes important. The positively charged particle will
-then tend to pick up electrons from the absorber, which effectively reduce its charge and
-consequent linear energy loss. At the end of its track, the particle has accumulated \(z\) electrons
-and becomes a neutral atom.</p>
-
-<h2>C. Energy Loss Characteristics</h2>
-<h3>1. THE BRAGG CURVE</h3>
-A plot of the specific energy loss along the track of a charged particle such as that shown in
-Fig. 2.2 is known as a <i>Bragg curve</i>. The example is shown for an alpha particle of several
-\(MeV\) initial energy. For most of the track, the charge on the alpha particle is two electronic
-charges, and the specific energy loss increases roughly as \(1/E\) as predicted by Eq. (2.2). Near
-the end of the track, the charge is reduced through electron pickup and the curve falls off.
-Plots are shown both for a single alpha particle track and for the average behavior of a
-parallel beam of alpha particles of the same initial energy. The two curves differ somewhat
-due to the effects of straggling, to be discussed below.
-
-<p><img src="fig2.2.png" width="372" height="174" alt=""></p>
-
-<p>Related plots showing \(-dE/dx\) versus particle energy for a number of different heavy
-charged particles are given in Fig. 2.3. These examples illustrate the energy at which charge
-pickup by the ion becomes significant. Charged particles with the greatest number of
-nuclear charges begin to pick up electrons early in their slowing-down process. Note that
-in an aluminum absorber, singly charged hydrogen ions (protons) show strong effects of
-charge pickup below about \(100 keV\), but doubly charged \(^{3}He\) ions show equivalent effects
-at about \(400 keV\).</p>
-
-<p><img src="fig2.3.png" width="447" height="481" alt=""></p>
-
-<h3>2. ENERGY STRAGGLING</h3>
-Because the details of the microscopic interactions undergone by any specific particle vary
-somewhat randomly, its energy loss is a statistical or stochastic process. Therefore, a spread
-in energies always results after a beam of monoenergetic charged particles has passed
-through a given thickness of absorber. The width of this energy distribution is a measure
-of energy straggling, which varies with the distance along the particle track.
-
-<p>Figure 2.4 shows a schematic presentation of the energy distribution of a beam of
-initially monoenergetic particles at various points along its range. Over the first portion,
-the distribution becomes wider (and more skewed) with penetration distance, showing the
-increasing importance of energy straggling. Near the end of the range, the distribution narrows
-again because the mean particle energy has greatly been reduced.</p>
-
-<p><img src="fig2.4.png" width="470" height="343" alt=""></p>
-
-<h3>D. Particle Range</h3>
-In order to quantify the definition of particle range, we refer to the conceptual experiment
-sketched in Fig. 2.5. Here a collimated source of monoenergetic alpha particles is counted
-by a detector after passing through an absorber of variable thickness. (We later contrast the
-behavior of other types of radiation when observed under similar conditions.) For alpha
-particles, the results are also plotted in Fig. 2.5. For small values of the absorber thickness,
-the only effect is to cause an energy loss of the alpha particles in the absorber as they pass
-through. Because the tracks through the absorber are quite straight, the total number that
-reach the detector remains the same. No attenuation in the number of alpha particles takes
-place until the absorber thickness approaches the length of the shortest track in the absorbing
-material. Increasing the thickness then stops more and more of the alpha particles, and
-the intensity of the detected beam drops rapidly to zero.
-
-<p><img src="fig2.5.png" width="472" height="240" alt=""></p>
-
-<p>The range of the alpha particles in the absorber material can be determined from this
-curve in several ways. The mean range is defined as the absorber thickness that reduces the
-alpha particle count to exactly one-half of its value in the absence of the absorber.
-This definition is most commonly used in tables of numerical range values. Another version
-that appears in the literature is the extrapolated range, which is obtained by extrapolating
-the linear portion of the end of the transmission curve to zero.</p>
-
-<p>The range of charged particles of a given energy is thus a fairly unique quantity in a
-specific absorber material. In the early days of radiation measurement, experiments of the
-type sketched in Fig. 2.5 were widely used to measure the energy of alpha particles indirectly
-by determining the absorber thickness equivalent to their mean range. With the
-availability of detectors that provide an output signal directly related to the alpha particle
-energy, such indirect measurements are no longer necessary.</p>
-
-<p>Some graphs of the mean range of various charged particles in materials of interest in
-detectors are given in Figs. 2.6 through 2.8. As one obvious application of these curves, any
-detector that is to measure the full incident energy of a charged particle must have an
-active thickness that is greater than the range of that particle in the detector material.</p>
-
-<p><img src="fig2.6.png" width="459" height="623" alt=""></p>
-<p><img src="fig2.7.png" width="445" height="668" alt=""></p>
-<p><img src="fig2.8.png" width="508" height="646" alt=""></p>
-
-<h3>2. RANGE STRAGGLING</h3>
-Charged particles are also subject to range straggling, defined as the fluctuation in path
-length for individual particles of the same initial energy. The same stochastic factors that
-lead to energy straggling at a given penetration distance also result in slightly different
-total path lengths for each particle. For heavy charged particles such as protons or alphas,
-the straggling amounts to a few percent of the mean range. The degree of straggling is evidenced
-by the sharpness of the cutoff at the end of the average transmission curve plotted
-in Fig. 2.2. Differentiating this curve leads to a peak whose width is often taken as a quantitative
-measure of the importance of range straggling for the particles and absorber used
-in the measurement.
-
-<h3>3. STOPPING TIME</h3>
-The time required to stop a charged particle in an absorber can be deduced from its range
-and average velocity. For nonrelativistic particles of mass m and kinetic energy \(E\), the
-velocity is
-\[
-v
- = \sqrt{\frac{2E}{m}} 
- = c \sqrt{\frac{2E}{mc^{2}}} 
- = \left( 3.00 \times 10^{8}\frac{m}{s} \right)\sqrt{\frac{2E}{(931 MeV/amu)m_{A}}}
-\]
-
-where \(m_{A}\) is the particle mass in atomic mass units and \(E\) is the particle energy in \(MeV\). If
-we assume that the average particle velocity as it slows down is \(\langle v \rangle = Kv\), where \(v\) is evaluated
-at the initial energy, then the stopping time \(T\) can be calculated from the range \(R\) as
-\[
-T
- = \frac{R}{\langle v \rangle}
- = \frac{R}{Kc}\sqrt{\frac{mc^{2}}{2E}} 
- = \frac{R}{K(3.00 \times 10^{8} m/s)}\sqrt{\frac{931 MeV/amu}{2}}\sqrt{\frac{m_{A}}{E}}
-\]
-
-If the particle were uniformly decelerated, then \(\langle v \rangle\) would be given by \(v/2\) and \(K\) would be \(0.5\).
-However, charged particles generally lose energy at a greater rate near the end of their
-range, and \(K\) should be a somewhat higher fraction. By assuming \(K = 0.60\), the stopping
-time can be estimated as
-\[
-T \cong 1.2 \times 10^{-7}R\sqrt{\frac{m_{A}}{E}} \tag{2.3}
-\]
-
-where \(T\) is in seconds, \(R\) in meters, \(m_{A}\) in \(amu\), and \(E\) in \(MeV\). This approximation is
-expected to be reasonably accurate for light charged particles (protons, alpha particles,
-etc.) over much of the energy range of interest here. It is not, however, to be used for
-relativistic particles such as fast electrons.
-
-<p>Using typical range values, stopping times calculated from Eq. (2.3) for charged particles
-are a few picoseconds in solids or liquids and a few nanoseconds in gases. These times
-are generally small enough to be neglected for all but the fastest-responding radiation
-detectors.</p>
-
-<h3>E. Energy Loss in Thin Absorbers</h3>
-For thin absorbers (or detectors) that are penetrated by a given charged particle, the energy
-deposited within the absorber can be calculated from
-Particle energy
-\[
-\Delta E = - \left( \frac{dE}{dx} \right)_{avg}t \tag{2.4}
-\]
-
-where \(t\) is the absorber thickness and \((-dE/dx)_{avg}\) is the linear stopping power averaged
-over the energy of the particle while in the absorber. If the energy loss is small, the stopping
-power does not change much and it can be approximated by its value at the incident
-particle energy. Tabular values for \(dE/dx\) for a number of different charged particles in a
-variety of absorbing media are given in Refs. 5-10. Some graphs for materials of interest
-are shown in Figs. 2.9 through 2.11.
-
-<p><img src="fig2.9.png" width="505" height="629" alt=""></p>
-<p><img src="fig2.10.png" width="587" height="642" alt=""></p>
-<p><img src="fig2.11.png" width="579" height="461" alt=""></p>
-
-<p>For absorber thicknesses through which the energy loss is not small, it is not simple to
-obtain a properly weighted \((-dE/dx)_{avg}\) value directly from such data. In these cases, it is
-easier to obtain the deposited energy in a way that makes use of range-energy data of the
-type plotted in Figs. 2.6 through 2.8. The basis of the method is as follows: Let \(R_{1}\) represent
-the full range of the incident particle with energy Eo in the absorber material. By subtracting
-the physical thickness of the absorber \(t\) from \(R_{1}\), a value \(R_{2}\) is obtained that represents
-the range of those alpha particles that emerge from the opposite surface of the absorber.
-By finding the energy corresponding to \(R_{2}\), the energy of the transmitted charged particles
-\(E_{t}\) is obtained. The deposited energy \(\Delta E\) is then given simply by \(E_{0} - E_{\gamma}\). These steps are
-illustrated below:</p>
-
-<p><img src="noname2.2.png" width="434" height="160" alt=""></p>
-
-The procedure is based on the assumption that the charged particle tracks are perfectly linear
-in the absorber, and the method does not apply in situations where the particle can be
-significantly deflected (such as for fast electrons).
-
-<p>The combined effects of particle range and the decrease in \(dE/dx\). with increasing energy
-are illustrated in Fig. 2.12. Here the energy loss of protons in a thin detector is plotted
-versus the incident proton energy. For low energies, the proton range is less than the detector
-thickness. Therefore, as the energy is increased, the energy deposited in the detector
-(which is just equal to the incident energy) increases linearly. At a proton energy of
-\(425 keV\), the range is exactly equal to the detector thickness. For higher energies, only a
-portion of incident energy is deposited, and the transmitted proton carries off the remainder.
-Under these conditions, the energy deposited in the detector is given by Eq. (2.4), or
-simply the product of the detector thickness and the average linear stopping power.
-Because the stopping power continuously decreases with increasing energy in this region
-(see Fig. 2.3), the deposited energy therefore decreases with further increases in the
-incident proton energy. The second curve in Fig. 2.12 plots the transmitted energy (\(E_{t}\) on
-the diagram on the preceding page) as recorded by a second thick detector.</p>
-
-<p><img src="fig2.12.png" width="497" height="341" alt=""></p>
-
-<h3>F. Scaling Laws</h3>
-Sometimes data are not available on the range or energy loss characteristics of precisely the
-same particle-absorber combination needed in a given experiment. Recourse must then be
-made to various approximations, most of which are derived based on the Bethe formula
-[Eq. (2.2)] and on the assumption that the stopping power per atom of compounds or mixtures
-is additive. This latter assumption, known as the <i>Bragg-Kleeman rule</i>, may be written
-\[
-\frac{1}{N_{c}}\left(\frac{dE}{dx}\right)_{c} = \sum_{i}W_{i}\frac{1}{N_{i}}\left(\frac{dE}{dx}\right)_{i} \tag{2.5}
-\]
-
-In this expression, \(N\) is the atomic density, \(dE/dx\) is the linear stopping power, and \(W_{i}\) represents
-the atom fraction of the \(i\)th component in the compound (subscript \(c\)). As an example
-of the application of Eq. (2.5), the linear stopping power of alpha particles in a metallic
-oxide could be obtained from separate data on the stopping power in both the pure
-metal and in oxygen. Some caution should be used in applying such results, however, since
-some measurements for compounds have indicated a stopping power differing by as
-much as 10-20% from that calculated from Eq. (2.5).
-
-<p>It can be shown that the range of a charged particle in a compound material can also
-be estimated provided its range is known in all the constituent elements. In this derivation,
-it is necessary to assume that the shape of the \(dE/dx\) curve is independent of the stopping
-medium. Under these conditions, the range in the compound is given by
-\[
-R_{c} = \frac{M_{c}}{\sum_{i}n_{i}(A_{i}/R_{i})} \tag{2.6}
-\]
-
-where \(R_{i}\) is the range in element \(i\), \(n_{i}\) is the number of atoms of element \(i\) in the molecule,
-\(A_{i}\) is the atomic weight of element \(i\), and \(M_{c}\) is the molecular weight of the compound.</p>
-
-<p>If range data are not available for all the constituent elements, estimates can be made
-based on a semiempirical formula (commonly called the Bragg-Kleeman rule as well)
-\[
-\frac{R_{1}}{R_{0}} \cong \frac{\rho_{0}\sqrt{A_{1}}}{\rho_{1}\sqrt{A_{0}}} \tag{2.7}
-\]
-
-where \(\rho\) and \(A\) represent density and atomic weight, and subscripts \(0\) and \(1\) refer to different
-absorbing materials.The accuracy of this estimate diminishes when the two materials are
-of widely different atomic weights, so it is always best to use range data from a material that
-is as close as possible in A to the absorber of interest.</p>
-
-<p>Range data can also be generalized to different charged particles within a given
-absorber material. By integration of Eq. (2.2), it can be shown that the range of a particle
-of mass \(m\)) and charge \(z\) can be represented by
-\[
-R_{v} = \frac{m}{z^{2}}F(v) \tag{2.8}
-\]
-
-where \(F(v)\) represents a unique function of the particle initial velocity \(v\). For particles of
-the same initial velocity, this factor will be identical and therefore we can write
-\[
-R_{a}(v) = \frac{m_{a}z_{b}^{2}}{m_{b}z_{a}^{2}}R_{b}(v) \tag{2.9}
-\]
-
-where the subscripts \(a\) and \(b\) refer to different charged particles. Thus, the range of a particle
-for which data are not available can be estimated by calculating its initial velocity, finding
-the range of any other particle of the same initial velocity in the same material, and
-applying Eq. (2.9). It should be emphasized that these estimates are only approximate,
-because no account is taken of the change in charge state of the particle as it nears the end
-of its path. Correction factors necessary to compensate for this effect and predict the range
-more accurately are presented by Evans.</p>
-
-<h3>G. Behavior of Fission Fragments</h3>
-The heavy fragments produced as a result of neutron-induced or spontaneous fission of
-heavy nuclei are energetic charged particles with properties somewhat different from those
-discussed up to this point. Because the fragments start out stripped of many electrons, their
-very large effective charge results in a specific energy loss greater than that encountered
-with any other radiations discussed in this text. Because the initial energy is also very high
-(see Fig. 1.4b), however, the range of a typical fission fragment is approximately half that
-of a \(5 MeV\) alpha particle.
-
-<p>An important feature of a fission fragment track is the fact that the specific energy loss
-\((-dE/dx)\) decreases as the particle loses energy in the absorber.This behavior is in marked
-contrast to the lighter particles, such as alpha particles or protons, and is a result of the continuous
-decrease in the effective charge carried by the fragment as its velocity is reduced.
-The pickup of electrons begins immediately at the start of the track, and therefore the factor
-\(z\) in the numerator of Eq. (2.2) continuously drops. The resulting decrease in \(-dE/dx\)
-is large enough to overcome the increase that normally accompanies a reduction in velocity.
-For particles with much lower initial charge state, such as the alpha particle, electron
-pickup does not become significant until near the end of the range.</p>
-
-<h3>H. Secondary Electron Emission from Surfaces</h3>
-As charged particles lose their kinetic energy during the slowing-down process, many electrons
-from the absorber are given a sufficient impulse to travel a short distance from the
-original track of the particle. These include the delta rays mentioned earlier, whose energy
-is high enough to ionize other absorber atoms, and also electrons whose kinetic energy of
-only a few \(eV\) is below the minimum energy for further ionization. If an energetic charged
-particle is incident on or emerges from a solid surface, some of these electrons may migrate
-to the surface and have sufficient energy to escape. The term secondary electrons is conventionally
-applied to these escaping low-energy electrons. (<i>Note</i>: The same term is often
-used to characterize the much more energetic electrons formed in the gamma-ray interactions
-described later in this chapter ー a very different type of secondary electron.)
-
-<p>A single heavy ion such as a fission fragment can produce hundreds of these escaping
-secondaries, whereas lighter alpha particles might typically result in 10 or fewer secondaries
-per particle. Fast electrons such as beta particles are much less likely to create escaping
-secondaries, and only a few percent will result in secondary emission. To a first approximation,
-the yield of secondaries will be proportional to the energy lost within a near-surface
-layer whose thickness represents the maximum distance an electron will tend to
-migrate from its point of origin and still retain enough energy to escape from the surface.
-Thus, the \(dE/dx\) value of the particle is a reasonable predictor of secondary yield from a
-given material. Those materials with low work function and large escape distance will have
-the largest yield. Thin films of alkali halides, and cesium iodide in particular, are observed
-to produce secondaries with high yield. Models of the electron transport in alkali halides
-confirm their suitability as prolific sources of secondary electrons.</p>
-
-<p>The energy spectrum of these escaping secondary electrons is a continuum with a
-mean value that is very low compared with the primary particle energy. For example, the
-energy of secondaries from a carbon surface average \(60-100 eV\) for alpha particles and
-\(290 eV\) for fission fragments. The energy of secondary electrons produced by lighter particles
-such as fast electrons is even lower. Thus it is normally difficult or impossible to
-observe the secondaries since they are readily reabsorbed even in air. If they are emitted
-into a vacuum or low-pressure gas, however, they can be accelerated and easily guided by
-electric fields because of their low initial velocity. For example, an electric field created by
-the application of \(1000 V\) with respect to the surface would have a strong influence on the
-trajectory of a \(100 eV\) electron, but almost no effect on a \(1 MeV\) fast electron. This property
-has led to the successful use of secondary electron emission from surfaces as a means
-of detecting the positions at which beta particles emerge from a surface and in the imaging
-of X-rays and fast electrons. Secondary electrons emitted from a thin foil and directed
-to an external electron detector such as a microchannel plate have also served as the
-basis for fast timing measurements with heavy ions. One special application of the secondary
-electron emission process will be detailed in Chapter 9, where a typical electron in
-a photomultiplier tube is accelerated to a few hundred eV before striking a solid surface,
-causing the emission of 5-10 secondaries in a charge multiplication process.</p>
-
-<h2>II. INTERACTION OF FAST ELECTRONS</h2>
-When compared with heavy charged particles, fast electrons lose their energy at a lower
-rate and follow a much more tortuous path through absorbing materials. A series of tracks
-from a source of monoenergetic electrons might appear as in the sketch below:
-
-<p><img src="noname2.3.png" width="310" height="127" alt=""></p>
-
-Large deviations in the electron path are now possible because its mass is equal to that of
-the orbital electrons with which it is interacting, and a much larger fraction of its energy
-can be lost in a single encounter. In addition, electron-nuclear interactions, which can
-abruptly change the electron direction, sometimes occur.
-
-<h3>A. Specific Energy Loss</h3>
-An expression similar to that of Eq. (2.2) has also been derived by Bethe to describe the specific
-energy loss due to ionization and excitation (the " collisional losses") for fast electrons:
-\[
--\left(\frac{dE}{dx}\right)_{c}
- = \frac{2\pi e^{4}NZ}{m_{0}v^{2}}
- 	\left(
- 		\ln\frac{m_{0}v^{2}E}{2I^{2}(1 - \beta^{2})}
- 			- (\ln 2)\left(2\sqrt{1 - \beta^{2}} - 1 + \beta^{2}\right)
- 			+ (1 - \beta^{2})
- 			+ \frac{1}{8}\left(1 - \sqrt{1 - \beta^{2}}\right)^{2}
- 	\right) \tag{2.10}
-\]
-
-where the symbols have the same meaning as in Eq. (2.2) and \(\beta = v/c\).
-
-<p>Electrons also differ from heavy charged particles in that energy may be lost by radiative
-processes as well as by coulomb interactions. These radiative losses take the form of
-bremsstrahlung or electromagnetic radiation, which can emanate from any position along
-the electron track. From classical theory, any charge must radiate energy when accelerated,
-and the deflections of the electron in its interactions with the absorber correspond to such
-acceleration. The linear specific energy loss through this radiative process is
-\[
--\left(\frac{dE}{dx}\right)_{r}
-	= \frac{NEZ(Z + 1)e^{4}}{137m_{0}^{2}c^{4}}\left(4\ln\frac{2E}{m_{0}c^{4}} - \frac{4}{3}\right) \tag{2.11}
-\]
-</p>
-
-<p>For the particle types and energy ranges of interest in this text, only fast electrons can
-have a significant yield of bremsstrahlung. The yield from heavy charged particles is negligible
-as indicated by the presence of the \(m_{0}^{2}\) factor in the denominator of the multiplicative
-term in Eq. (2.11). The factors of \(E\) and \(Z^{2}\) in the numerator of Eq. (2.11) show that radiative
-losses are most important for high electron energies and for absorber materials of
-large atomic number. For typical electron energies, the average bremsstrahlung photon
-energy is quite low (see Fig. 1.6) and is therefore normally reabsorbed fairly close to its
-point of origin. In some cases, however, the escape of bremsstrahlung can influence the
-response of small detectors.</p>
-
-<p>The total linear stopping power for electrons is the sum of the collisional and radiative
-losses:
-\[
-\frac{dE}{dx} = \left(\frac{dE}{dx}\right)_{c} + \left(\frac{dE}{dx}\right)_{r} \tag{2.12}
-\]
-
-The ratio of the specific energy losses is given approximately by
-\[
-\frac{(dE/dx)_{r}}{(dE/dx)_{c}} \cong \frac{EZ}{700} \tag{2.13}
-\]
-
-where \(E\) is in units of \(MeV\). For the electrons of interest here (such as beta particles or secondary
-electrons from gamma-ray interactions), typical energies are less than a few \(MeV\).
-Therefore, radiative losses are always a small fraction of the energy losses due to ionization
-and excitation and are significant only in absorber materials of high atomic number.</p>
-
-<h3>B. Electron Range and Transmission Curves</h3>
-<h4>1. ABSORPTION OF MONOENERGETIC ELECTRONS</h4>
-An attenuation experiment of the type discussed earlier for alpha particles is sketched in
-Fig. 2.13 for a source of monoenergetic fast electrons. Even small values of the absorber
-thickness lead to the loss of some electrons from the detected beam because scattering of
-the electron effectively removes it from the flux striking the detector. A plot of the detected
-number of electrons versus absorber thickness therefore begins to drop immediately and
-gradually approaches zero for large absorber thicknesses. Those electrons that penetrate
-the greatest absorber thickness will be the ones whose initial direction has changed least in
-their path through the absorber.
-
-<p><img src="fig2.13.png" width="588" height="193" alt=""></p>
-
-<p>The concept of range is less definite for fast electrons than for heavy charged particles,
-because the electron total path length is considerably greater than the distance of penetration
-along the initial velocity vector. Normally, the electron range is taken from a transmission
-plot, such as that given in Fig. 2.13, by extrapolation of the linear portion of the
-curve to zero and represents the absorber thickness required to ensure that almost no electrons
-can penetrate the entire thickness.</p>
-
-<p><img src="fig2.14.png" width="591" height="662" alt=""></p>
-
-<p>For equivalent energy, the specific energy loss of electrons is much lower than that of
-heavy charged particles, so their path length in typical absorbers is hundreds of times
-greater. As a very crude estimate, electron ranges tend to be about \(2 mm\) per \(MeV\) in low-density
-materials, or about \(1 mm\) per \(MeV\) in materials of moderate density</p>
-
-<p>Tabular data are given in Refs. 22 and 23 for the stopping power and range of electrons
-and positrons in elements and compounds, covering a large region of energy. To a fair
-degree of approximation, the product of the range times the density of the absorber is a
-constant for different materials for electrons of equal initial energy. Plots of the range of
-electrons in two common detector materials are given in Fig. 2.14.</p>
-
-<h4>2. ABSORPTION OF BETA PARTICLES</h4>
-<p><img src="fig2.15.png" width="392" height="357" alt=""></p>
-
-The transmission curve for beta particles emitted by a radioisotope source, because of the
-continuous distribution in their energy, differs significantly from that sketched in Fig. 2.13
-for monoenergetic electrons. The "soft" or low-energy beta particles are rapidly absorbed
-even in small thicknesses of the absorber, so that the initial slope on the attenuation curve
-is much greater. For the majority of beta spectra, the curve happens to have a near-exponential
-shape and is therefore nearly linear on the semilog plot of the type shown in
-Fig. 2.15. This exponential behavior is only an empirical approximation and does not have
-a fundamental basis as does the exponential attenuation of gamma rays [see Eq. (2.20)]. An
-<i>absorption coefficient</i> \(n\) is sometimes defined by
-\[
-\frac{I}{I_{0}} = e^{-nt} \tag{2.14}
-\]
-where
+ここで、
 \begin{eqnarray}
-I_{0} &=& {\rm counting \, rate \, without \, absorber} \\
-I     &=& {\rm counting \, rate \, with \, absorber} \\
-t     &=& {\rm absorber \, thickness \, in \,} g/cm^{2}
+A_{p}&:&1 回のふき取り試験でふき取った放射能 \\
+A_{T}&:&ふき取りを行う前に存在した遊離性表面汚染の放射能
 \end{eqnarray}
 
-<p>The coefficient \(n\) correlates well with the endpoint energy of the beta emitter for a specific
-absorbing material. This dependence is shown in Fig. 2.16 for aluminum. Through the
-use of such data, attenuation measurements can be used to identify indirectly endpoint
-energies of unknown beta emitters, although direct energy measurements are more
-common.</p>
+<h4>注記</h4>
+何回もふき取り試験を繰り返すことによって，実験的にふき取り効率 F を求めることができる。
+複数回のふき取り試験でふき取った放射能を合算することによって，遊離性表面汚染の放射能（A({T}）を精度よく推定することができ，最初のふき取り試験でふき取った放射能（\(A_{p}\)）との比からふき取り効率 F を算出することができる。
 
-<p><img src="fig2.16.png" width="491" height="389" alt=""></p>
+<h3>3.9 表面放出率 \(q_{2\pi}\)</h3>
+線源の前方表面から単位時間に放出される，あるエネルギー以上の\(\beta\)粒子又は\(\alpha\)粒子の数。
 
-<h4>3. BACKSCATTERING</h4>
-The fact that electrons often undergo large-angle deflections along their tracks leads to the
-phenomenon of <i>backscattering</i>. An electron entering one surface of an absorber may
-undergo sufficient deflection so that it re-emerges from the surface through which it
-entered. These backscattered electrons do not deposit all their energy in the absorbing
-medium and therefore can have a significant effect on the response of detectors designed
-to measure the energy of externally incident electrons. Electrons that backscatter in the
-detector "entrance window" or dead layer will escape detection entirely.
+<h3>3.10 線源効率 \(\epsilon_{S}\)</h3>
+<p>表面放出率の線源（飽和層厚さ以上の厚さの線源は飽和層）の中で単位時間に放出される同じ種類の放射線粒子数に対する比</p>
 
-<p>Backscattering is most pronounced for electrons with low incident energy and
-absorbers with high atomic number. Figure 2.17 shows the fraction of monoenergetic electrons
-that are backscattered when normally incident on the surface of various absorbers.
-Additional data for materials commonly used as electron detectors are given in Table 10.1.</p>
+<h3>3.11 機器効率 \(\epsilon_i\)</h3>
+<p>線源に対して，決められた幾何学的条件で測定したときの測定器の正味計数率と線源の表面放出率との比。
+ある特定の放射線測定器の機器効率は，放射線のエネルギーに依存する</p>
 
-<p><img src="fig2.17.png" width="472" height="627" alt=""></p>
+<h4>注記</h4>
+<p> 3.9 及び 3.10 の定義から，表面放出率は，放射能と線源効率\(\epsilon_S\)との積となる（A.1 参照）</p>
 
-<p>Backscattering can also influence the apparent yield from radioisotope sources of beta
-particles or conversion electrons. If the source is deposited on a thick backing, electrons
-that are emitted initially into this backing may backscatter and re-emerge from the surface
-of the source.</p>
+<h2>放射性表面汚染の測定方法</h2>
+<h3>4.1 一般</h3>
+<p>放射性表面汚染は，直接測定法及び間接測定法によって測定する。
+直接測定法では，通常，放射線測定器を用いて遊離性表面汚染と固定性表面汚染とを同時に測定する。
+間接測定法では，通常，ふき取り試験によって遊離性表面汚染だけを測定する。</p>
 
-<h3>C. Positron Interactions</h3>
-The coulomb forces that constitute the major mechanism of energy loss for both electrons and
-heavy charged particles are present for either positive or negative charge on the particle.
-Whether the interaction involves a repulsive or attractive force between the incident particle
-and orbital electron, the impulse and energy transfer for particles of equal mass are about the
-same. Therefore, the tracks of positrons in an absorber are similar to those of normal negative
-electrons, and their specific energy loss and range are about the same for equal initial energies.
+<p>放射性表面汚染を測定する目的は，次の二つである。</p>
+<ol type="a">
+<li>放射性表面汚染の有無及び汚染の範囲を特定し，高いレベルの汚染区域から低いレベルの汚染区域又は非汚染区域への汚染の拡大を防止する。</li>
+<li>単位面積当たりの放射能を評価して，表面密度限度などの判定基準以下であるか，超えているかを確認する。</li>
+</ol>
 
-<p>Positrons differ significantly, however, in that the annihilation radiation described in
-Chapter 1 is generated at the end of the positron track. Because these \(0.511\) MeV photons
-are very penetrating compared with the range of the positron, they can lead to the deposition
-of energy far from the original positron track.</p>
+<p>直接測定法か間接測定法かの選択は，放射性表面汚染の物理的及び化学的形状，物品などの表面との付着状態（固定性表面汚染又は遊離性表面汚染），放射線測定器を測定点に近づけることの可否，妨害となる外部放射線の有無などによる。</p>
 
-<h2>III. INTERACTION OF GAMMA RAYS</h2>
-Although a large number of possible interaction mechanisms are known for gamma rays
-in matter, only three major types play an important role in radiation measurements: <i>photoelectric
-absorption</i>, <i>Compton scattering</i>, and <i>pair production</i>. All these processes lead to the
-partial or complete transfer of the gamma-ray photon energy to electron energy. They
-result in sudden and abrupt changes in the gamma-ray photon history, in that the photon
-either disappears entirely or is scattered through a significant angle. This behavior is in
-marked contrast to the charged particles discussed earlier in this chapter, which slow down
-gradually through continuous, simultaneous interactions with many absorber atoms. The
-fundamentals of the gamma-ray interaction mechanisms are introduced here but are again
-reviewed at the beginning of Chapter 10 in the context of their influence on the response
-of gamma-ray detectors.
+<p>間接測定法は，放射線測定器を測定点に近づけることが物理的に困難な場合，又は外部放射線量が高い場合に，有効な方法である。
+間接測定法では，固定性表面汚染を測定することはできない。
+また，ふき取り効率に起因する不確かさも決して小さいものではないが，遊離性表面汚染の測定に有効である。</p>
 
-<h3>A. Interaction Mechanisms</h3>
-<h4>1. PHOTOELECTRIC ABSORPTION</h4>
-In the photoelectric absorption process, a photon undergoes an interaction with an
-absorber atom in which the photon completely disappears. In its place, an energetic <i>photoelectron</i>
-is ejected by the atom from one of its bound shells.The interaction is with the atom
-as a whole and cannot take place with free electrons. For gamma rays of sufficient energy,
-the most probable origin of the photoelectron is the most tightly bound or \(K\) shell of the
-atom. The photoelectron appears with an energy given by
+<p>直接測定法及び間接測定法のいずれにも欠点があり，よりよい結果を得るためには両者を併用することが望ましい。</p>
+
+<p>機器効率は放射線エネルギーに依存するため，複数のβ線放出核種による混合汚染の場合には，注意しなければならない（箇条 5 参照）。
+放射能を直接表示する放射線測定器を用いる場合には，特に注意が必要である。</p>
+
+<p>なお，校正及び測定にかかわる基本的事項及びデータは，附属書 A による。</p>
+
+<h3>4.2 直接測定法</h3>
+<h4>4.2.1 放射線測定器に対する要求事項</h4>
+<p>放射性表面汚染の測定に用いる放射線測定器の特性及び性能は，JIS Z 4329 に合致したものでなければならない。</p>
+
+<p>放射線測定器は，表面密度限度などの判定基準以下の汚染レベルを測定できるものでなければならない。</p>
+
+<h5>注記 1</h5>
+この規格では，検出限界放射能を求める具体的計算方法については規定しない。
+
+<h5>注記 2</h5>
+直接測定法に用いる放射線測定器の有効性は機器効率だけでなく，有効面積の大きさにもよる。
+大面積の窓をもつ放射線測定器は，広範囲にわたって汚染を測定するときなどに有効である。
+
+<h4>4.2.2 検出方法</h4>
+<p>測定面上をゆっくりと，検出器を移動させながら測定する。
+汚染を検出した場合は，その場所に検出器を十分な時間，静止させて測定する。検出器と測定面との距離は，検出器が汚染しない程度にできる限り近づける。
+距離を一定に保持するためにスペーサなどを用いてもよい。</p>
+
+<h4>4.2.3 測定方法</h4>
+<h5>4.2.3.1 測定するときは，放射線測定器の取扱説明書及び次の事項に従わなければならない。</h5>
+<ol type="a">
+<li>測定場所におけるバックグラウンド計数率をあらかじめ測定する。</li>
+<li>バックグラウンド計数率は，測定中も適宜，確認する。</li>
+<li>放射線測定器が正常に動作することを，測定頻度が高い場合には毎日，そうでない場合には測定の都度，適切な確認用線源を用いて確認することが望ましい。
+確認の結果，基準値との差が 25  ％を超えた場合は，再校正しなければならない。</li>
+<li>実際に放射性表面汚染を測定する場合の幾何学的条件は，校正時の条件と可能な限り同一にすることが望ましい。
+そのために，着脱式のスペーサを用いてもよい。</li>
+<li>精度よく測定する場合には，検出器を時定数の 3 倍の時間（95  ％指示に相当）静止させた後，指示値を読み取る。</li>
+<li>機器効率は，対象とする核種に対して十分高いものでなければならない（箇条 5 参照）。</li>
+</ol>
+
+<h5>4.2.3.2固定性表面汚染及び遊離性表面汚染の表面汚染密度 \(A_{S}(Bq\cdot cm^{−2})\)は，式(1)による。ただし，汚染面積は，放射線測定器の有効窓（入射窓）面積と同等又は広いものとし，有効窓面積における表面汚染密度は均一とみなす。</h5>
 \[
-E_{e} = h\nu - E_{b} \tag{2.15}
+A_S = \frac{n - n_B}{\upsilon_i \times W \times \epsilon_s}
 \]
 
-where \(E_{b}\) represents the binding energy of the photoelectron in its original shell. For
-gamma-ray energies of more than a few hundred \(keV\), the photoelectron carries off the
-majority of the original photon energy.
+ここで
+\begin{eqnarray}
+n          &:& 総計数率（s^{−1}) \\
+n_B        &:& バックグラウンド計数率（s^{−1}) \\
+\epsilon_i &:& \beta 粒子又は \alpha粒子に対する機器効率（箇条 5 及び A.2 参照） \\
+W          &:& 放射線測定器の有効窓面積（cm^2) \\
+\epsilon_s &:& 放射性表面汚染の線源効率（A.1 参照）
+\end{eqnarray}
 
-<p>In addition to the photoelectron, the interaction also creates an ionized absorber atom
-with a vacancy in one of its bound shells. This vacancy is quickly filled through capture of
-a free electron from the medium and/or rearrangement of electrons from other shells of
-the atom. Therefore, one or more characteristic X-ray photons may also be generated.
-Although in most cases these X-rays are reabsorbed close to the original site through
-photoelectric absorption involving less tightly bound shells, their migration and possible
-escape from radiation detectors can influence their response (see Chapter 10). In some
-fraction of the cases, the emission of an Auger electron may substitute for the characteristic
-X-ray in carrying away the atomic excitation energy.</p>
+\(\epsilon_s\)の値が明らかでない場合は，安全側の数値として，次の値を用いることが望ましい（A.1 参照）
+\begin{eqnarray}
+\epsilon_s &:& 0.5 \qquad  ［\beta 線放出核種（E_{\beta_{max}}≧0.4 MeV）］ \\
+\epsilon_s &:& 0.25 \qquad  ［\beta 線放出核種（0.15 MeV＜E_{\beta_{max}}＜0.4 MeV）］
+\end{eqnarray}
 
-<p>As an example of the complexity of these interactions, consider incident photons with
-energy above \(30 keV\) that undergo photoelectric absorption in xenon. About 86% interact
-through \(K\)-shell absorptions in the xenon atom. Of these, 87.5% result in \(K\)-shell characteristic
-(or "fluorescent") X-rays (a mixture of \(K\text{-}\alpha\) and \(K\text{-}\beta\)) and 12.5% de-excite through the
-emission of Auger electrons. The remaining 14% of the incident photons that do not undergo
-\(K\)-shell interactions are absorbed through photoelectric interaction with the \(L\) or \(M\) shells.
-These result in much lower energy characteristic X-rays or Auger electrons that are very short
-range and, to first approximation, are reabsorbed very near the site of the original interaction.
-Another example of such a "cascade sequence" is shown in Chapter 10 as Fig. 10.20.</p>
+<p>α線放出核種の場合は，この値を用いると過小評価になる可能性がある（A.1 参照）</p>
 
-<p>The photoelectric process is the predominant mode of interaction for gamma rays (or
-X-rays) of relatively low energy. The process is also enhanced for absorber materials of
-high atomic number \(Z\). No single analytic expression is valid for the probability of photoelectric
-absorption per atom over all ranges of \(E_{\gamma}\) and \(Z\), but a rough approximation is
+<p>必要に応じて，得られる計数率に不感時間の補正をすることが望ましい。</p>
+
+<p>逐次壊変する\(\alpha\)線放出核種が平衡状態にある場合には，平衡状態にあるすべての\(\alpha\)線放出核種の全放射能を測定することになる。
+完全に平衡状態に達している場合は，全放射能を平衡状態にある核種の数で除した値が一つの\(\alpha\)線放出核種の放射能となる。</p>
+
+<p>平衡状態にあるβ線放出核種についても同様であるが，親核種及び子孫核種に対する機器効率が同程度の場合に限る（表 A.3 の注記参照）</p>
+
+<p>表 A.3 の補足欄に§印を付した放射平衡核種については，核種欄に下線を付した核種だけが検出される。
+これらが平衡状態にある場合の全放射能は，算出した放射能の 2 倍となる。</p>
+
+<h6>注記</h6>
+<p>自動演算機能を備えた放射線測定器は，\(n_B\)，\(W\)，\(\epsilon_i\)及び\(\epsilon_s\)の値を記憶させることによって，単位面積当たりの放射能を自動的に表示することができる。
+\(\epsilon_i\)及び\(\epsilon_s\)は，核種と放射性表面汚染との状況によって決まる値であり，それぞれ適切な値を選択できなければならないが，一般的には，選択できないパラメータとして機器のメモリに記憶されている。
+ただし，このような放射線測定器を箇条 5 の注記 5 に従って校正した場合には，\(\epsilon_s\)の値だけが選択できればよいことになる</p>
+
+<h3>間接測定法</h3>
+<h4>4.3.1 放射線測定器に対する要求事項</h4>
+<p>ふき取り試料は，パルス計測形の固定式測定器を遮へい体で囲って測定することが一般的である。
+放射性表面汚染サーベイメータを用いる場合には，その特性及び性能は，JIS Z 4329 に合致しなければならない。</p>
+
+<p>放射線測定器は，表面密度限度などの判定基準以下のレベルを測定できなければならない（4.2.1 の注記1参照）。</p>
+
+<h4>4.3.2 ふき取り試料の採取方法</h4>
+<p>湿式ふき取り試験又は乾式ふき取り試験のいずれかの方法で行う。</p>
+
+<p>広い面積をふき取る場合には，次の事項を考慮しなければならない。</p>
+
+
+<ol type="a">
+<li>ふき取り面積は，できるだけ \(100 cm^2\)とすることが望ましい。</li>
+<li>法規制などで，放射性表面汚染の評価を \(100 cm^2\)より広い面積の平均でよいとしている場合には，その面積をふき取ってもよい。</li>
+<li>ふき取りろ紙などは，試験する物品などの表面の状態に合うものを選ぶことが望ましい（例えば，平滑な表面にはふき取りろ紙，平滑でない表面には綿布など。）。</li>
+<li>
+湿式ふき取り試験の場合は，ふき取りろ紙などから用いた液体がにじみ出ないことが望ましい。<br>
+警告: α線放出核種に対して湿式ふき取り試験を行うと，放射性表面汚染がふき取りろ紙などの中に侵入したり，ふき取りろ紙などが残存水分で覆われたりするため，過小評価になることがある。
+</li>
+<li>物品などの表面を適切な強さの力でふき取る。
+ふき取りろ紙などを直接指で押さえてふき取ってもよいが，ホルダのようなジグを用いることによって，均一で一定の力となることが望ましい。</li>
+<li>\(100cm^2\)の全面積を一様にふき取る。</li>
+<li>ふき取りろ紙などは，特に問題がなければ，円形のふき取りろ紙を用いることが望ましい。</li>
+<li>ふき取りろ紙などにおけるふき取り部の面積は，検出器の有効面積と等しいか，又は小さくなければならない。</li>
+<li>試料採取の後，ふき取りろ紙などが水分を含んでいる場合は，放射能の損失に注意しながら乾燥する。</li>
+</ol>
+
+<h4>4.3.3 測定方法</h4>
+<p>ふき取り試料は，4.2.3.1 の方法で測定することが望ましい。</p>
+
+<p>ふき取った表面の単位面積当たりのβ線放出核種又はα線放出核種の遊離性表面汚染の放射能 \(A_{sr}（Bq\cdot cm^{−2}）\)は，式(2)による。</p>
 \[
-\tau \cong {\rm constant} \times \frac{Z^{n}}{E_{\gamma}^{3.5}} \tag{2.16}
+A_{sr} = \frac{n - n_B}{\epsilon_i\times F\times S\times\epsilon_s} \tag{2}
 \]
 
-where the exponent \(n\) varies between 4 and 5 over the gamma-ray energy region of interest.
-This severe dependence of the photoelectric absorption probability on the atomic number
-of the absorber is a primary reason for the preponderance of high-\(Z\) materials (such as
-lead) in gamma-ray shields. As further detailed in Chapter 10, many detectors used for
-gamma-ray spectroscopy are chosen from high-\(Z\) constituents for the same reason.</p>
+ここに、
+\begin{eqnarray}
+n          &:& 全計数率（s^{−1}） \\
+n_B        &:& バックグラウンド計数率（s^{−1}）\\
+\epsilon_i &:& \beta 粒子又は\alpha 粒子に対する機器効率（箇条 5 及び A.2 参照） \\
+F          &:& ふき取り効率 \\
+S          &:& ふき取り面積（cm^2）\\
+\epsilon_s &:& ふき取り試料の線源効率（A.2 参照）
+\end{eqnarray}
 
-<p>A plot of the photoelectric absorption cross section for a popular gamma-ray detection
-material, sodium iodide, is shown in Fig. 2.18. In the low-energy region, discontinuities in
-the curve or "absorption edges" appear at gamma-ray energies that correspond to the binding
-energies of electrons in the various shells of the absorber atom. The edge lying highest
-in energy therefore corresponds to the binding energy of the \(K\)-shell electron. For gamma-ray
-energies slightly above the edge, the photon energy is just sufficient to undergo a
-photoelectric interaction in which a \(K\)-electron is ejected from the atom. For gamma-ray
-energies slightly below the edge, this process is no longer energetically possible and therefore
-the interaction probability drops abruptly. Similar absorption edges occur at lower
-energies for the \(L\), \(M\), ... electron shells of the atom.</p>
+<small>注) 式(2)を適用できる核種は，箇条 1 で規定した核種に限る。</small>
 
-<p><img src="fig2.18.png" width="504" height="720" alt=""></p>
+<p>ふき取り試料の線源効率\(\epsilon_s\)は，4.2.3.2 の値を用いることが望ましい。</p>
 
-<h4>2. COMPTON SCATTERING</h4>
-The interaction process of Compton scattering takes place between the incident gamma-ray
-photon and an electron in the absorbing material. It is most often the predominant
-interaction mechanism for gamma-ray energies typical of radioisotope sources.
+<p>ふき取り効率 \(F\) は，実験的評価がある場合にはその値を，実験的評価がない場合には安全を考慮して 0.1を用いなければならない。</p>
 
-<p>In Compton scattering, the incoming gamma-ray photon is deflected through an angle
-\(\theta\) with respect to its original direction. The photon transfers a portion of its energy to the
-electron (assumed to be initially at rest), which is then known as a <i>recoil electron</i>. Because
-all angles of scattering are possible, the energy transferred to the electron can vary from
-zero to a large fraction of the gamma-ray energy.</p>
+<p>平衡状態にある核種については，4.2.3.2 を参照する</p>
 
-<p>The expression that relates the energy transfer and the scattering angle for any given
-interaction can simply be derived by writing simultaneous equations for the conservation
-of energy and momentum. Using the symbols defined in the sketch below</p>
+<h2>5 機器効率の決定</h2>
+<p>機器効率は，単位面積当たりの放出率について校正した JIS Z 4334 に規定する標準線源を用いて校正しなければならない。</p>
+<p>標準線源の放射能面積は，検出器窓を十分に覆う大きさであることが望ましい。
+大面積の標準線源がない場合には，少なくとも \(100 cm^2\)の放射能面積をもつ比較的小さい面積の標準線源を用いて分割測定をする。
+分割測定の場合には，有効窓面積の全体にわたって測定することが望ましいが，代表的な部分について測定する方法でも差し支えない。
+いずれの方法でも機器効率\(\epsilon_i\)は，測定結果の平均値から求める。</p>
+<p>\(\alpha\)粒子に対する機器効率及び\(\beta\)粒子に対する機器効率，それぞれについて校正しなければならない。</p>
+<p>いずれの場合も，測定時に吸収を受け，例えば，\(\alpha\)線は，線エネルギースペクトルが連続スペクトルのように広がるなどの影響がある。
+このように，実際の放射性表面汚染に対する放射線測定器の機器効率は，薄層の標準線源に対する機器効率より一般的に小さくなる。</p>
+<p>β粒子に対する機器効率\(\epsilon_i\)は，\(\beta\)線エネルギーに依存するので，実際の放射性表面汚染から放出される\(\beta\)線のエネルギーに対応した機器効率を求めることが望ましい。
+\(\beta\)線エネルギーの異なる複数の核種を使用する施設でも，実際は，特定の\(\beta\)線エネルギーに対する機器効率だけで測定しているところが多いが，このような場合は，校正に用いる標準線源の\(\beta\)線エネルギーは，測定対象とする核種の中の最も低い\(\beta\)線エネルギーと比較して，極端に高いものであってはならない。</p>
+<p>次に示すβ線放出核種が，標準線源の核種に適している。</p>
 
-<p><img src="noname2.4.png" width="367" height="160" alt=""></p>
+<table>
+<tr><td>\(^{14}C\)</td><td>\((E_{\beta_{max}} = 0.154MeV)\)</td></tr>
+<tr><td>\(^{147}Pm\)</td><td>\((E_{\beta_{max}} = 0.225MeV)\)</td></tr>
+<tr><td>\(^{36}Cl\)</td><td>\((E_{\beta_{max}} = 0.71MeV)\)</td></tr>
+<tr><td>\(^{204}Tl\)</td><td>\((E_{\beta_{max}} = 0.77MeV)\)</td></tr>
+<tr><td>\(^{90}Sr/^{90}Y\)</td><td>\((E_{\beta_{max}} = 2.26MeV)\)</td></tr>
+<tr><td>\(^{106}Ru/^{106}Rh\)</td><td>\((E_{\beta_{max}} = 3.54MeV)\)</td></tr>
+</table>
 
-we can show that
+<p>機器効率を校正するときの幾何学的条件は，直接測定法又は間接測定法で実際に放射性表面汚染を測定するときの幾何学的条件にできる限り近いものにしなければならない（4.2.3.1 参照）</p>
+
+<p>機器効率\(\epsilon_i\)は，式(3)による（A.2 参照）</p>
+
 \[
-h\nu' = \frac{h\nu}{1 + \frac{h\nu}{m_{0}c^{2}}(1 - \cos\theta)} \tag{2.17}
+\epsilon_i = \frac{n - n_B}{q_{2\pi,SC}} = \frac{n - n_B}{E_{SC}\times W} \tag{3}
 \]
 
-where \(m_{0}c^{2}\) is the rest-mass energy of the electron (\(0.511 MeV\)). For small scattering
-angles \(\theta\), very little energy is transferred. Some of the original energy is always retained by
-the incident photon, even in the extreme of \(\theta = \pi\). Equations (10.3) through (10.6) describe
-some properties of the energy transfer for limiting cases. A plot of the scattered photon
-energy predicted from Eq. (2.17) is also shown in Fig. 10.7.
+ここに、
+\begin{eqnarray}
+n_B          &:& バックグラウンド計数率（s^{−1}）\\
+n            &:& 標準線源による全計数率（s^{−1}）\\
+q_{2\pi,SC} &:& 検出器の有効窓面積W（cm^2）の部分における標準線源の表面放出率（s^{−1}）\\
+E_{SC}       &:& 標準線源の単位面積当たりの表面放出率（s^{−1}\cdot cm^{−2}）
+\end{eqnarray}
 
-<p>The probability of Compton scattering per atom of the absorber depends on the number
-of electrons available as scattering targets and therefore increases linearly with \(Z\). The
-dependence on gamma-ray energy is illustrated in Fig. 2.18 for the case of sodium iodide
-and generally falls off gradually with increasing energy.</p>
+<p><small>注記1　\(^{90}Sr\)が\(^{90}Y\)と平衡状態にある場合には，標準線源の単位面積当たりの表面放出率\(E_{SC}\)は，\(^{90}Sr\)だけに着目した単位面積当たりの表面放出率の 2 倍である。</small></p>
+<p><small>注記2　標準線源の表面放出率が不明の場合，すなわち，標準線源が JIS Z 4334 の規定を満足していない場合は，A.4.1 に基づいて，\(E_{SC}\)を推定することができる</small></p>
+<p><small>注記3  薄層の標準線源を用いて校正するよりも飽和層厚さの標準線源を用いて校正する方が，機器効率は，安全側の値となる。</small></p>
+<p><small>注記 4  自動演算機能を備えた放射線測定器の中には，次の方法で\(\epsilon_i\)を決定できるものがある。
+単位面積当たりの表面放出率（\(E_{SC}\)）で校正した，十分に広い面積の標準線源の上方に検出器を置き，放射線測定器の校正定数を連続的に変化させて計数率計の指示が\(E_{SC}\)の値に一致するように合わせる。これによって，放射線測定器は，その条件下における機器効率\(\epsilon_i\)εiに等しい校正定数をもつことになる。</small></p>
+<p><small>注記 5  自動演算機能を備えた放射線測定器は，次の方法で校正を行うこともできる。
+単位面積当たりの表面放出率（\(E_{SC}\)）で校正した，十分に広い面積の標準線源の上方に検出器を置き，放射線測定器の校正定数を連続的に変化させて計数率計の指示が\(E_{SC}/\epsilon_s\)の値に一致するように合わせる。
+ただし，\(\epsilon_s\)は，実際の放射性表面汚染の線源効率である。</small></p>
 
-<p>The angular distribution of scattered gamma rays is predicted by the <i>Klein-Nishina
-formula</i> for the differential scattering cross section \(d\sigma/d\Omega\):
-\[
-\frac{d\sigma}{d\Omega} =
-	Zr_{0}^{2}
-	\left(\frac{1}{1 + \alpha(1 - \cos\theta)}\right)^{2}
-	\left(\frac{1 + \cos^{2}\theta}{2}\right)
-	\left(1 + \frac{\alpha^{2}(1 - \cos\theta)^{2}}{(1 + \cos^{2}\theta)[1 + \alpha(1 - \cos\theta)]}\right) \tag{2.18}
-\]
-
-where \(\alpha = h\nu/m_{0}c^{2}\) and \(r_{0}\) is the classical electron radius. The distribution is shown graphically
-in Fig. 2.19 and illustrates the strong tendency for forward scattering at high values
-of the gamma-ray energy.</p>
-
-<p><img src="fig2.19.png" width="516" height="365" alt=""></p>
-
-<h4>3. PAIR PRODUCTION</h4>
-If the gamma-ray energy exceeds twice the rest-mass energy of an electron (\(1.02 MeV\)), the
-process of pair production is energetically possible. As a practical matter, the probability of
-this interaction remains very low until the gamma-ray energy approaches several \(MeV\) and
-therefore pair production is predominantly confined to high-energy gamma rays. In the
-interaction (which must take place in the coulomb field of a nucleus), the gamma-ray photon
-disappears and is replaced by an electron-positron pair. All the excess energy carried
-in by the photon above the \(1.02 MeV\) required to create the pair goes into kinetic energy
-shared by the positron and the electron. Because the positron will subsequently annihilate
-after slowing down in the absorbing medium, two annihilation photons are normally
-produced as secondary products of the interaction. The subsequent fate of this annihilation
-radiation has an important effect on the response of gamma-ray detectors, as described in
-Chapter 10.
-
-<p>No simple expression exists for the probability of pair production per nucleus, but its
-magnitude varies approximately as the square of the absorber atomic number. The importance
-of pair production rises sharply with energy, as indicated in Fig. 2.18.</p>
-
-<p>The relative importance of the three processes described above for different absorber
-materials and gamma-ray energies is conveniently illustrated in Fig. 2.20.The line at the left
-represents the energy at which photoelectric absorption and Compton scattering are
-equally probable as a function of the absorber atomic number. The line at the right represents
-the energy at which Compton scattering and pair production are equally probable.
-Three areas are thus defined on the plot within which photoelectric absorption, Compton
-scattering, and pair production each predominate.</p>
-
-<p><img src="fig2.20.png" width="542" height="334" alt=""></p>
-
-<h4>4. COHERENT SCATTERING</h4>
-In addition to Compton scattering, another type of scattering can occur in which the gamma-ray
-photon interacts coherently with all the electrons of an absorber atom. This <i>coherent scattering</i>
-or <i>Rayleigh scattering</i> process neither excites nor ionizes the atom, and the gammaray
-photon retains its original energy after the scattering event. Because virtually no energy
-is transferred, this process is often neglected in basic discussions of gamma-ray interactions,
-and we will also ignore it in the discussions that follow. However, the direction of the photon
-is changed in coherent scattering, and complete models of gamma-ray transport must take it
-into account. The probability of coherent scattering is significant only for low photon energies
-(typically below a few hundred \(keV\) for common materials) and is most prominent in
-high-\(Z\) absorbers. The average deflection angle decreases with increasing energy, further
-restricting the practical importance of coherent scattering to low energies.
-
-<h3>B. Gamma-Ray Attenuation</h3>
-<h4>1. ATTENUATION COEFFICIENTS</h4>
-<p><img src="fig2.21.png" width="513" height="247" alt=""></p>
-
-If we again picture a transmission experiment as in Fig. 2.21, where monoenergetic gamma
-rays are collimated into a narrow beam and allowed to strike a detector after passing
-through an absorber of variable thickness, the result should be simple exponential attenuation
-of the gamma rays as also shown in Fig. 2.21. Each of the interaction processes
-removes the gamma-ray photon from the beam either by absorption or by scattering away
-from the detector direction and can be characterized by a fixed probability of occurrence
-per unit path length in the absorber. The sum of these probabilities is simply the probability
-per unit path length that the gamma-ray photon is removed from the beam:
-\[
-\mu = \tau({\rm photoelectric}) + \sigma({\rm Compton}) + \kappa({\rm pair}) \tag{2.19}
-\]
-
-and is called the <i>linear attenuation coefficient</i>. The number of transmitted photons \(I\) is then
-given in terms of the number without an absorber \(I_{0}\) as
-\[
-\frac{I}{I_{0}} = e^{-\mu t} \tag{2.20}
-\]
-
-The gamma-ray photons can also be characterized by their mean free path A, defined as the
-average distance traveled in the absorber before an interaction takes place. Its value can
-be obtained from
-\[
-\lambda = \frac{\int_{0}^{\infty}xe^{-\mu x}dx}{\int_{0}^{\infty}e^{-\mu x}dx} = \frac{1}{\mu} \tag{2.21}
-\]
-
-and is simply the reciprocal of the linear attenuation coefficient. Typical values of \(\lambda\) range
-from a few \(mm\) to tens of \(cm\) in solids for common gamma-ray energies.
-
-<p>Use of the linear attenuation coefficient is limited by the fact that it varies with the
-density of the absorber, even though the absorber material is the same. Therefore, the <i>mass
-attenuation coefficient</i> is much more widely used and is defined as
-\[
-{\rm mass \, attenuation \, coefficient \,} = \frac{\mu}{\rho} \tag{2.22}
-\]
-
-where \(\rho\) represents the density of the medium. For a given gamma-ray energy, the mass
-attenuation coefficient does not change with the physical state of a given absorber. For
-example, it is the same for water whether present in liquid or vapor form. The mass attenuation
-coefficient of a compound or mixture of elements can be calculated from
-\[
-\left(\frac{\mu}{\rho}\right)_{c} = \sum_{i}w_{i}\left(\frac{\mu}{\rho}\right)_{i} \tag{2.23}
-\]
-
-where the \(w_{i}\) factors represent the weight fraction of element \(i\) in the compound or mixture.</p>
-
-<h4>2. ABSORBER MASS THICKNESS</h4>
-In terms of the mass attenuation coefficient, the attenuation law for gamma rays now takes
-the form
-\[
-\frac{I}{I_{0}} = e^{-(\mu/\rho)\rho t} \tag{2.24}
-\]
-
-The product \(\rho t\), known as the <i>mass thickness</i> of the absorber, is now the significant parameter
-that determines its degree of attenuation. Units of mass thickness have historically
-been \(mg/cm^{2}\), and this convention is retained in this text. The thickness of absorbers used
-in radiation measurements is therefore often measured in mass thickness rather than physical
-thickness, because it is a more fundamental physical quantity.
-
-<p>The mass thickness is also a useful concept when discussing the energy loss of charged
-particles and fast electrons. For absorber materials with similar \(neutron/proton\) ratios, a
-particle will encounter about the same number of electrons passing through absorbers of
-equal mass thickness. Therefore, the stopping power and range, when expressed in units of
-\(\rho t\), are roughly the same for materials that do not differ greatly in \(Z\).</p>
-
-<h4>3. BUILDUP</h4>
-The gamma-ray attenuation experiment of Fig. 2.21, in which the gamma rays are collimated
-to a narrow beam before striking the absorber, is sometimes characterized as a "narrow
-beam" or "good geometry" measurement. The essential characteristic is that only
-gamma rays from the source that escape interaction in the absorber can be counted by the
-detector. Real measurements are often carried out under different circumstances (as
-sketched below) in which the severe collimation of the gamma rays is absent.
-
-<p><img src="noname2.5.png" width="308" height="142" alt=""></p>
-
-<p>Now the detector can respond either to gamma rays directly from the source, to
-gamma rays that reach the detector after having scattered in the absorber, or to other types
-of secondary photon radiation. Many types of detectors will be unable to distinguish
-between these possibilities, so that the measured detector signal will be larger than that
-recorded under equivalent "good geometry" conditions. The conditions that lead to the
-simple exponential attenuation of Eq. (2.20) are therefore violated in this "broad beam" or
-"bad geometry" measurement because of the additional contribution of the secondary
-gamma rays. This situation is usually handled by replacing Eq. (2.20) by the following:</p>
-\[
-\frac{I}{I_{0}} = B(t, E_{\gamma})e^{-\mu t} \tag{2.25}
-\]
-
-<p>where the factor \(B(t, E_{\gamma})\) is called the <i>buildup factor</i>. The exponential term is retained to
-describe the major variation of the gamma-ray counting rate with absorber thickness, and
-the buildup factor is introduced as a simple multiplicative correction. The magnitude of the
-buildup factor depends on the type of gamma-ray detector used, because this will affect the
-relative weight given to the direct and secondary gamma rays. (With a detector that
-responds only to the direct gamma rays, the buildup factor is unity.) The buildup also
-depends on the specific geometry of the experiment. As a rough rule of thumb, the buildup
-factor for thick slab absorbers tends to be about equal to the thickness of the absorber
-measured in units of mean free path of the incident gamma rays, provided the detector
-responds to a broad range of gamma-ray energies.</p>
-
-<h2>IV. INTERACTION OF NEUTRONS</h2>
-<h3>A. General Properties</h3>
-In common with gamma rays, neutrons carry no charge and therefore cannot interact in
-matter by means of the coulomb force, which dominates the energy loss mechanisms for
-charged particles and electrons. Neutrons can also travel through many centimeters of matter
-without any type of interaction and thus can be totally invisible to a detector of common
-size. When a neutron does undergo interaction, it is with a nucleus of the absorbing
-material. As a result of the interaction, the neutron may either totally disappear and be
-replaced by one or more secondary radiations, or else the energy or direction of the neutron
-is changed significantly.
-
-<p>In contrast to gamma rays, the secondary radiations resulting from neutron interactions
-are almost always heavy charged particles. These particles may be produced either as
-a result of neutron-induced nuclear reactions or they may be the nuclei of the absorbing
-material itself, which have gained energy as a result of neutron collisions. Most neutron
-detectors utilize some type of conversion of the incident neutron into secondary charged
-particles, which can then be detected directly. Specific examples of the most useful conversion
-processes are detailed in Chapters 14 and 15.</p>
-
-<p>The relative probabilities of the various types of neutron interactions change dramatically
-with neutron energy. In somewhat of an oversimplification, we will divide neutrons
-into two categories on the basis of their energy, either "fast neutrons" or "slow neutrons,"
-and discuss their interaction properties separately. The dividing line will be at about \(0.5 eV\),
-or about the energy of the abrupt drop in absorption cross section in cadmium (the
-<i>cadmium cutoff energy</i>).</p>
-
-<h3>B. Slow Neutron Interactions</h3>
-For slow neutrons, the significant interactions include elastic scattering with absorber nuclei
-and a large set of neutron-induced nuclear reactions. Because of the small kinetic energy of
-slow neutrons, very little energy can be transferred to the nucleus in elastic scattering.
-Consequently, this is not an interaction on which detectors of slow neutrons can be based.
-Elastic collisions tend to be very probable, however, and often serve to bring the slow neutron
-into thermal equilibrium with the absorber medium before a different type of interaction takes
-place. Much of the population in the slow neutron energy range will therefore be found among
-these thermal neutrons, which, at room temperature, have an average energy of about \(0.025 eV\).
-
-<p>The slow neutron interactions of real importance are neutron-induced reactions that
-can create secondary radiations of sufficient energy to be detected directly. Because the
-incoming neutron energy is so low, all such reactions must have a positive \(Q\)-value to be
-energetically possible. In most materials, the radiative capture reaction [or \((n, \gamma)\) reaction]
-is the most probable and plays an important part in the attenuation or shielding of neutrons.
-Radiative capture reactions can be useful in the indirect detection of neutrons using
-activation foils as described in Chapter 19, but they are not widely applied in active neutron
-detectors because the secondary radiation takes the form of gamma rays, which are
-also difficult to detect. Instead, reactions such as \((n, \alpha)\), \((n, p)\), and \((n, fission)\) are much
-more attractive because the secondary radiations are charged particles. A number of specific
-reactions of this type are detailed in Chapter 14.</p>
-
-<h3>C. Fast Neutron Interactions</h3>
-The probability of most neutron-induced reactions potentially useful in detectors drops off
-rapidly with increasing neutron energy. The importance of scattering becomes greater, however,
-because the neutron can transfer an appreciable amount of energy in one collision. The secondary
-radiations in this case are recoil nuclei, which have picked up a detectable amount of
-energy from neutron collisions. At each scattering site, the neutron loses energy and is thereby
-moderated or slowed to lower energy. The most efficient moderator is hydrogen because the
-neutron can lose up to all its energy in a single collision with a hydrogen nucleus. For heavier
-nuclei, only a partial energy transfer is possible [see Eq.(15.4) and the associated discussion].
-
-<p>If the energy of the fast neutron is sufficiently high, inelastic scattering with nuclei can
-take place in which the recoil nucleus is elevated to one of its excited states during the collision.
-The nucleus quickly de-excites, emitting a gamma ray, and the neutron loses a greater
-fraction of its energy than it would in an equivalent elastic collision. Inelastic scattering and
-the subsequent secondary gamma rays play an important role in the shielding of high-energy
-neutrons but are an unwanted complication in the response of most fast neutron
-detectors based on elastic scattering.</p>
-
-<h3>D. Neutron Cross Sections</h3>
-For neutrons of a fixed energy, the probability per unit path length is a constant for any one
-of the interaction mechanisms. It is conventional to express this probability in terms of the
-cross section a per nucleus for each type of interaction. The cross section has units of area
-and has traditionally been measured in units of the <i>barn</i> (\(10^{-28}m^{2}2\)). For example, each
-nuclear species will have an elastic scattering cross section, a radiative capture cross section,
-and so on, each of which will be a function of the neutron energy. Some examples of
-cross section plots are given in Figs. 14.1 and 14.2.
-
-<p>When multiplied by the number of nuclei \(N\) per unit volume, the cross section \(\sigma\) is converted
-into the macroscopic cross section \(\Sigma\)
-\[
-\Sigma = N\sigma \tag{2.26}
-\]
-
-which now has dimensions of inverse length. \(\Sigma\) has the physical interpretation of the probability
-per unit path length for the specific process described by the "microscopic" cross
-section \(\sigma\). When all processes are combined by adding together the cross sections for each
-individual interaction
-\[
-\Sigma_{tot} = \Sigma_{{\rm scatter}} + \Sigma_{{\rm rad.capture}} + ... \tag{2.27}
-\]
-
-the resulting \(\Sigma_{tot}\) is the probability per unit path length that any type of interaction will
-occur. This quantity has the same significance for neutrons as the linear absorption coefficient
-for gamma rays defined earlier. If a narrow beam attenuation experiment is carried
-out for neutrons, as sketched earlier for gamma rays, the result will be the same: The number
-of detected neutrons will fall off exponentially with absorber thickness. In this case the
-attenuation relation is written
-\[
-\frac{I}{I_{0}} = e^{-\Sigma_{tot}t} \tag{2.28}
-\]
-
-The neutron mean free path \(\lambda\) is, by analogy with the gamma-ray case, givcn by \(1/\Sigma_{tot}\). In
-solid materials, \(\lambda\) for slow neutrons may be of the order of a centimeter or less, whereas for
-fast neutrons, it is normally tens of centimeters.</p>
-
-<p>Under most circumstances, neutrons are not narrowly collimated so that typical shielding
-situations involve broad beam or "bad geometry" conditions. Just as in the case of
-gamma rays, the exponential attenuation of Eq. (2.28) is no longer an adequate description
-because of the added importance of scattered neutrons reaching the detector. A more complex
-neutron transport computation is then required to predict the number of transmitted
-neutrons and their distribution in energy</p>
-
-<p>When discussing the rate of reactions induced by neutrons, it is convenient to introduce
-the concept of neutron flux. If we first consider neutrons with a single energy or fixed
-velocity \(v\), the product \(v\Sigma\) gives the interaction frequency for the process for which \(\Sigma\) is the
-macroscopic cross section. The reaction rate density (reactions per unit time and volume)
-is then given by \(n(r)v\Sigma\), where \(n(r)\) is the neutron number density at the vector position \(r\),
-and \(n(r)v\) is defined as the <i>neutron flux</i> \(\varphi(r)\) with dimensions of \(leng^{-2} time^{-1}\). Thus, the
-reaction rate density is given by the product of the neutron flux and the macroscopic cross
-section for the reaction of interest:
-\[
-{\rm reaction \, rate \, density \,} = \varphi(r) \tag{2.29}
-\]
-
-This relation can be generalized to include an energy-dependent neutron flux \(\varphi(r, E)\) and
-cross section \(\Sigma(E)\):
-\[
-{\rm reaction \, rate \, density \,} = \int_{0}^{\infty}\varphi(r, E)\Sigma(E)dE \tag{2.30}
-\]
-</p>
-
-<h2>V. RADIATION EXPOSURE AND DOSE</h2>
-Because of their importance in personnel protection at radiation-producing facilities and
-in the medical applications of radiation, the concepts of radiation exposure and dose play
-prominent roles in radiation measurements. In the following sections, we introduce the fundamental
-concepts that underlie the quantities and units of importance in this area. Precise
-definitions of quantities related to radiation protection are continually evolving, and the
-reader is referred to publications of the International Commission on Radiological Units
-and Measurements (ICRU), the International Commission on Radiological Protection
-(ICRP), and the U.S. National Commission on Radiation Protection (NCRP) for up-todate
-information. As examples, Refs. 29 and 30 are comprehensive reviews of the units and
-detailed issues that arise in the monitoring of radiation exposures.
-
-<h3>A. Gamma-Ray Exposure</h3>
-The concept of gamma-ray exposure was introduced early in the history of radioisotope
-research. Defined only for sources of X- or gamma rays, a fixed exposure rate exists at every
-point in space surrounding a source of fixed intensity. The exposure is linear, in that doubling
-the source intensity also doubles the exposure rate everywhere around the source.
-
-<p>The basic unit of gamma-ray exposure is defined in terms of the charge \(dQ\) due to ionization
-created by the secondary electrons (negative electrons and positrons) formed within
-a volume element of air and mass \(dm\), when these secondary electrons are completely
-stopped in air. The exposure value \(X\) is then given by \(dQ/dm\). The SI unit of gamma-ray
-exposure is thus the coulomb per kilogram (\(C/kg\)), which has not been given a special
-name. The historical unit has been the roentgen (\(R\)), defined as the exposure that results in
-the generation of one electrostatic unit of charge (about \(2.08 \times 10^{9}\) ion pairs) per
-\(0.001293 g\) (\(1 cm^{3}\) at STP) of air. The two units are related by</p>
-\[
-1R = 2.58 \times 10^{-4} C/kg
-\]
-
-
-
-
-
-
-
-
+<h2>6 測定の記録</h2>
+<p>放射性表面汚染の測定報告書が必要な場合には，次の事項を記載することが望ましい。</p>
+<ol type="a">
+<li>測定年月日</li>
+<li>測定場所及び測定箇所</li>
+<li>間接測定法の場合の表面状態</li>
+<li>間接測定法の場合のふき取りろ紙などの種類（乾式ふき取り法と湿式ふき取り法との区別）</li>
+<li>湿式ふき取り法の場合に用いた液体</li>
+<li>間接測定法の場合のふき取り効率（実験に基づいた値か否かの区別）</li>
+<li>放射線測定器の名称及び機器番号</li>
+<li>機器効率及び校正年月日</li>
+<li>校正に用いた標準線源：核種及び（単位面積当たりの）表面放出率</li>
+<li>放射線測定器の指示値（直接測定法又は間接測定法の区別）</li>
+<li>バックグラウンド指示値</li>
+<li>放射性表面汚染の表面汚染密度</li>
+<li>放射性表面汚染の広がりに関する記述</li>
+<li>その他の観察事項</li>
+<li>測定者の氏名</li>
+</ol>
 
 
 
